@@ -13,13 +13,13 @@ public class HelloSender {
     @Autowired
     private AmqpTemplate template;
 
-    public void send(){
+    public void send() {
 //        User user=new User();
 //        user.setUsername("li");
 //        user.setPassword("123");
 //        template.convertAndSend("queue",user);
 
 //        template.convertAndSend("exchange","topic.message","hello word!");
-        template.convertAndSend("fanoutExchange","","hello word!");
+        template.convertAndSend("fanoutExchange", "", "hello word!");
     }
 }

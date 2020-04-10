@@ -44,18 +44,18 @@ public class SenderConfig {
 //        return BindingBuilder.bind(queueMessages).to(exchange).with("topic.#");//*表示一个词,#表示零个或多个词
 //    }
 
-    @Bean(name="Amessage")
+    @Bean(name = "Amessage")
     public Queue AMessage() {
         return new Queue("fanout.A");
     }
 
 
-    @Bean(name="Bmessage")
+    @Bean(name = "Bmessage")
     public Queue BMessage() {
         return new Queue("fanout.B");
     }
 
-    @Bean(name="Cmessage")
+    @Bean(name = "Cmessage")
     public Queue CMessage() {
         return new Queue("fanout.C");
     }
